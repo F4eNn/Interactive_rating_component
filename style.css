@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary-orange: hsl(25, 97%, 53%);
+	--White: hsl(0, 0%, 100%);
+	--light-gray: hsl(217, 12%, 63%);
+	--medium-grey: hsl(209, 20%, 31%);
+	--dark-blue: hsl(215, 23%, 14%);
+	--very-dark-blue: hsl(228, 11%, 9%);
+	--fz-paragraph: 14px;
+	--fw-regular: 400;
+	--fw-bold: 700;
+}
+p,
+button,
+h2 {
+	color: var(--White);
+}
+body {
+	font-family: 'Overpass', sans-serif;
+	background-color: var(--very-dark-blue);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container-rating {
+	position: relative;
+	width: 325px;
+	height: 375px;
+	padding: 25px;
+	background-color: var(--dark-blue);
+	border-radius: 20px;
+    display: none;
+	
+}
+.star {
+    position: absolute;
+	background-color: var(--medium-grey);
+	border-radius: 50%;
+	padding: 15px 15px 9px 15px;
+}
+.title {
+	margin: 70px 0 20px 0;
+}
+.text {
+	font-size: var(--fz-paragraph);
+	color: var(--light-gray);
+	margin-bottom: 25px;
+    line-height:25px;
+}
+.numbers {
+	display: flex;
+	justify-content: space-between;
+}
+.one,
+.two,
+.three,
+.four,
+.five {
+	width: 45px;
+	height: 45px;
+	background-color: var(--medium-grey);
+	border-radius: 50%;
+	padding: 13px;
+	text-align: center;
+    transition: background-color .3s;
+}
+.numbers p:hover{
+    background-color: var(--primary-orange);
+    cursor:pointer;
+}
+.submit {
+	display: block;
+	height: 40px;
+	width: 100%;
+	margin: 25px auto;
+	text-align: center;
+	background-color: var(--primary-orange);
+	border: none;
+	border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color .3s, color .3s;
+}
+.submit:hover{
+    background-color: var(--White);
+    color: var(--primary-orange);
+}
+.error{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--fz-paragraph);
+    color: rgb(255, 127, 8);
+    display: none;
+}
+.grey-color{
+    background-color: var(--light-gray);
+}
+
+
+
+.container-cheers{
+    height: 375px;
+    width:325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-blue);
+    padding: 25px;
+}
+.container-cheers img{
+    margin-top: 20px;
+}
+.rating-box{
+    position: relative;
+    width: 220px;
+    height: 30px;
+    background-color: var(--medium-grey);
+    border-radius: 20px;
+}
+.title{
+    margin-top: 25px;
+}
+.text{
+    text-align: center;
+}
