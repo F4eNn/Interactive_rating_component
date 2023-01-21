@@ -35,7 +35,6 @@ body {
 	padding: 25px;
 	background-color: var(--dark-blue);
 	border-radius: 20px;
-    display: none;
 	
 }
 .star {
@@ -48,32 +47,34 @@ body {
 	margin: 70px 0 20px 0;
 }
 .text {
+	text-align: left;
+}
+.text, .text-thanks{
 	font-size: var(--fz-paragraph);
 	color: var(--light-gray);
 	margin-bottom: 25px;
-    line-height:25px;
+    line-height:20px;
 }
 .numbers {
 	display: flex;
 	justify-content: space-between;
 }
-.one,
-.two,
-.three,
-.four,
-.five {
+input {
 	width: 45px;
 	height: 45px;
 	background-color: var(--medium-grey);
 	border-radius: 50%;
 	padding: 13px;
 	text-align: center;
+	border: none;
+	color: var(--White);
     transition: background-color .3s;
+	cursor: pointer;
 }
-.numbers p:hover{
-    background-color: var(--primary-orange);
-    cursor:pointer;
+.numbers input:hover{
+	background-color: var(--light-gray);
 }
+
 .submit {
 	display: block;
 	height: 40px;
@@ -100,34 +101,51 @@ body {
     color: rgb(255, 127, 8);
     display: none;
 }
-.grey-color{
+.active{
     background-color: var(--light-gray);
 }
-
-
-
 .container-cheers{
     height: 375px;
     width:325px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 20px;
     background-color: var(--dark-blue);
     padding: 25px;
+	display: none;
 }
 .container-cheers img{
+	
     margin-top: 20px;
+	
 }
 .rating-box{
     position: relative;
-    width: 220px;
-    height: 30px;
-    background-color: var(--medium-grey);
+	width: 60%;
+	padding: 10px;
+	margin: 15px auto 0;
+	font-size: 14px;
     border-radius: 20px;
+    background-color: var(--medium-grey);
+	color: var(--primary-orange);
 }
-.title{
-    margin-top: 25px;
+.second-title{
+    margin:25px 0 10px 0;
 }
-.text{
-    text-align: center;
+.text-thanks{
+	font-size: 14px;
+}
+@media (min-width:768px){
+	.text-thanks{
+		font-size: 12.3px;
+	}
+	.text{
+		text-align: left;
+	}
+	.numbers input:hover{
+		background-color: var(--primary-orange);
+	}
+	
 }
